@@ -4,7 +4,7 @@
 ## Decisions
 
  * We don't version formulas in the image, because we don't version `apt-get`,
- we can never garuntee that we're going to build the exact same image in the
+ we can never gaurantee that we're going to build the exact same image in the
  exact same order.
  * Naming is `@image` and `home@` or `home@user`.
  * You're fighting a war inside your head against multi-tenancy, and
@@ -42,9 +42,9 @@ an underscore in their name, but all other images will be. We can find homeport
 images by looking in `homeport`.
 
 What about hosting at Docker Hub? If I want to publish an image, how do I
-distinquish that image on my local machine? We can use the tag for that, because
+distinguish that image on my local machine? We can use the tag for that, because
 we only ever use `latest` and `foundation`, we could have a tag like
-`by_bigeasy`, or similar. There is currently no way to distinquish namespaces
+`by_bigeasy`, or similar. There is currently no way to distinguish namespaces
 between `quay.io` and Docker Hub, so we're in collision territory anyway.
 
 Looks as though there is going to be no versioning then. The tag is used for
@@ -74,7 +74,7 @@ users, so they're not going to send mail email, or `talk` to me.
 ## Rebuilding
 
 We don't version formulas in the image, because we don't version `apt-get`, we
-can never garuntee that we're going to build the exact same image in the exact
+can never guarantee that we're going to build the exact same image in the exact
 same order. If you change a formula significantly, rearrange it's arguments,
 then append it, we're going to run that command, but we're going to run it as a
 replacement for the first invocation. Thus, you're not supposed to run a command
